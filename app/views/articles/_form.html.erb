@@ -1,26 +1,41 @@
 <section class="row">
   <div class="form-container">
+
+
     <%= render 'share/error' %>
 
+
     <%= form_with(model: @article, local: true) do |f| %>
-      <div class="form-group">
-        <%= f.label :title, class: "col-2 col-form-label" %> 
-        <div class="col-10">
-          <%= f.text_field :title, class: "form-control" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <%= f.label :description, class: "col-2 col-form-label" %>
-          <div class="col-16">
-            <%= f.text_area :description, rows: 18, class: "form-control" %> 
+
+        <div class="form-group">
+
+          <%= f.label :title, class: "col-2 col-form-label" %> 
+          <div class="col-10">
+            <%= f.text_field :title, class: "form-control" %>
           </div>
-      </div>
-      <p class="submit-btn">
-        <%= f.submit class: "btn btn-outline-success" %> 
-      </p>
-      <p class="return-listing">
-      <%= link_to "Return to articles listing", articles_path, class: "submit-btn" %>
-      </p>
+
+        </div>
+
+        <div class="form-group">
+
+          <%= f.label :description, class: "col-2 col-form-label" %>
+            <div class="col-16">
+              <%= f.text_area :description, rows: 18, class: "form-control" %> 
+            </div>
+
+        </div>
+
+        <p class="submit-btn">
+          <%= f.submit class: "btn btn-outline-success" %> 
+        </p>
+        
+        <p class="return-listing">
+          <%= link_to "Return to articles listing", articles_path, class: "submit-btn" %>
+        </p>
+
+
     <% end %>
+
+
   </div>
 </section>
