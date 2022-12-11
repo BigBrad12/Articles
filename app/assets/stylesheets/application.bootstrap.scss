@@ -1,0 +1,210 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+/* 
+========= typography ============
+*/
+body {
+    font: 300 18px/150% Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #293f50;
+    color: rgb(37, 37, 37);
+}
+h1 {
+    font: 300 45px/150% Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 18px;
+}
+h5 {
+    font: 300 25px/150% Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.primary-footer p {
+    color: #fff;
+}
+p {
+    padding: 7px;
+    color: black;
+}
+/*
+    ============
+    Buttons
+    ============
+*/
+.btn {
+    color: #fff;
+}
+.btn:hover {
+    color: #fff;
+}
+.btn-outline-success {
+    border-color: #fff;
+}
+.btn-outline-success:hover {
+    
+    background-color: #7ca388;
+}
+.card-btns {
+    text-align: center;
+    padding-bottom: 18px;
+}
+.card-btns a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.button_to {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.submit-btn {
+    text-align: center;
+    margin-top: 18px;
+    color:rgb(58, 58, 58);
+    padding-bottom: 5px;
+}
+.return-listing {
+    text-align: center;
+    color:rgb(58, 58, 58);
+    padding-bottom: 25px;
+}
+.bg-light {
+    background-color: rgb(26, 25, 25) !important;
+}
+.navbar-brand {
+    color: white;
+    text-transform: uppercase;
+    font-size: 42px;
+    padding: 20px 20px;
+}
+.nav-link {
+    color: white !important;
+}
+.navbar-nav {
+    --bs-nav-link-hover-color: color:rgb(142, 255, 255) !important;
+}
+.navbar-brand:hover {
+    color: #7ca388;
+
+}
+.navbar-toggler {
+    color:#7ca388;
+
+    background-color: beige;
+}
+#home-container {
+    height: 580px;
+    margin-top: 30px;
+    background-image: url('pen.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#home-container h1{
+    margin-top: 65px;
+    margin-bottom: 340px;
+    text-transform: uppercase;
+}
+.container-border {
+    border: 2px solid #7ca388;
+    border-radius: 5px;
+}
+.main-box {
+    height: 500px;
+}
+.main-box p {
+    vertical-align: text-bottom;
+}
+a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+a:hover {
+    color: #7ca388;
+
+}
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+h1.container {
+    padding: 20px;
+}
+.grid {
+    max-width: 1240px;
+    margin: auto;
+}
+.col-article {
+    width: 99%;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.row {
+    padding: 48px 0 35px 0;
+    background: -moz-linear-gradient(to right, #7ca388, #f6f1d3);
+    background: -webkit-gradient(to right, #7ca388, #f6f1d3);
+    background: linear-gradient(to right, #7ca388, #f6f1d3);
+}
+
+/*
+    =========================
+    Cards
+    =========================
+*/
+.card-heading {
+    background-color: #7ca388;
+    color: black;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    align-items: center;
+}
+.card-footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #7ca388;
+}
+/* 
+===================================
+Containers
+===================================
+*/
+.form-container {
+    width: 1500px;
+    margin: auto;
+}
+/* 
+===================================
+Forms
+===================================
+*/
+#article_title {
+    size: 280px 44px;
+}
+
+.page-heading {
+    color: #fff;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    font-size: 48px;
+    text-align: center;
+}
+.link_to {
+    color: black;
+}
+
+/* 
+==========================
+Footer
+==========================
+*/
+#sticky-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+html {
+    position: relative;
+    min-height: 100%;
+  }
