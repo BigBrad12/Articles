@@ -35,7 +35,7 @@
         </div>
 
         <p class="submit-btn col-4">
-          <%= f.submit "Sign Up", class: "btn btn-outline-success" %> 
+          <%= f.submit(@user.new_record? ? "Sign Up" : "Update", class: "btn btn-outline-success") %> 
         </p>
         
         <p class="return-listing col-4">
