@@ -2,8 +2,14 @@
 
 <%= gravatar_for @user, size: 200 %>
 
-<div class="card-btns">
-    <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-outline-success mt-4" %>
+<div class= "text-center">
+    <div class="card-btns d-inline">
+        <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-outline-success mt-4" %>
+    </div>
+
+    <div class="card-btns d-inline">
+        <%= button_to "Logout", logout_path, method: "delete", class: "btn btn-outline-success mt-4" %>
+    </div>
 </div>
 
 <h3 class="page-heading text-center">Articles</h3>
