@@ -2,7 +2,7 @@
   <div class="form-container">
 
 
-    <%= render 'share/error' %>
+    <%= render 'share/error', obj: @article %>
 
 
     <%= form_with(model: @article, local: true) do |f| %>

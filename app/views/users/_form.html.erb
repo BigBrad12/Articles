@@ -1,0 +1,50 @@
+<section class="row">
+  <div class="form-container">
+
+
+    <%= render 'share/error', obj: @user %>
+
+
+    <%= form_with(model: @user, local: true) do |f| %>
+
+        <div class="form-group">
+
+          <%= f.label :username, class: "col-2 col-form-label" %> 
+          <div class="col-4">
+            <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Username" %>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+
+          <%= f.label :email, class: "col-2 col-form-label" %>
+            <div class="col-4">
+              <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "Email" %> 
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+          <%= f.label :password, class: "col-2 col-form-label" %>
+            <div class="col-4">
+              <%= f.text_field :password, class: "form-control shadow rounded", placeholder: "Password" %> 
+            </div>
+
+        </div>
+
+        <p class="submit-btn col-4">
+          <%= f.submit class: "btn btn-outline-success" %> 
+        </p>
+        
+        <p class="return-listing col-4">
+          <%= link_to "Return to articles listing", articles_path, class: "submit-btn" %>
+        </p>
+
+
+    <% end %>
+
+
+  </div>
+</section>
