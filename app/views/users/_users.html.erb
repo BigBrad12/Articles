@@ -1,0 +1,58 @@
+<!-- 
+
+   ================  CONTAINERS  ================            
+
+-->
+
+<section class="row">
+  <div class="grid">
+
+
+<!-- 
+
+   ================  CARDS START ================            
+
+-->
+
+    <% @users.each do |user| %>
+
+
+      <section class="col-article container-border">
+
+        <div class="card-heading">
+          <h5 class="text-center"><%= link_to user.username, user %></h5>
+        </div> 
+
+        <div>
+          <p><%= link_to gravatar_for(user, size: 150), user %></p>
+        </div>
+
+        <div class="text-center">
+          <p><%= pluralize(user.articles.count, "article") %></p>
+        </div>
+<!-- 
+
+   ================  BUTTONS  ================            
+
+-->
+        <div class="card-btns">
+          <%= link_to "View Profile", user, class: "btn btn-outline-success" %>
+          <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-outline-success" %>
+        </div>
+
+<!-- 
+
+   ================  CARD FOOTER  ================            
+
+-->
+
+        <div class="card-footer">
+          <small>Joined <%= time_ago_in_words(user.created_at)%> ago</small>
+        </div>
+
+      </section>
+
+    <% end %>
+
+  </div>
+</section>
