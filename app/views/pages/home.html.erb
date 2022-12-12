@@ -1,7 +1,9 @@
 <div class="container text-center container-border" id="home-container">
     <div class="main-box">
         <h1>Freedom Of Pen</h1>
-        <p><%= link_to "Articles Listing", articles_path %></p>
-        <p><%= link_to "About", about_path %></p>
+        <div class="card-btns">
+         <%= link_to "Articles", articles_path, class: "btn btn-outline-success text-black" %>
+         <%= link_to "About", about_path, class: "btn btn-outline-success text-black" %>
+        </div>
     </div>
 </div>

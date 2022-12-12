@@ -17,10 +17,10 @@
     <% @articles.each do |article| %>
 
 
-      <section class="col-article container-border">
+      <section class="col-article container-border shadow">
 
         <div class="card-heading">
-          <h5 class="text-center">Author: <%= article.user.username %></h5>
+          <h5 class="text-center">Author: <%= link_to article.user.username, user_path(article.user) %></h5>
         </div> 
 
         <div>

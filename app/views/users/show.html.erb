@@ -8,4 +8,8 @@
 
 <h3 class="page-heading text-center">Articles</h3>
 
+
+<div class="apple_pagination">
+      <%= will_paginate @articles, :container => false %>
+    </div>
 <%= render 'articles/articles' %>

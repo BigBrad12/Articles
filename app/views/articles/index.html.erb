@@ -5,12 +5,17 @@
 -->
 <section class="grid">
   <h1 class="page-heading">Articles</h1>
-  <div class="card-btns">
-          <%= link_to "Create New Article", new_article_path, class: "btn btn-outline-success" %>
-          <%= link_to "View Authors", users_path, class: "btn btn-outline-success" %>
-        </div>
+    <div class="card-btns">
+      <%= link_to "Create New Article", new_article_path, class: "btn btn-outline-success" %>
+      <%= link_to "View Authors", users_path, class: "btn btn-outline-success" %>
+    </div>
 </section>
 
+
+    <div class="apple_pagination">
+      <%= will_paginate @articles, :container => false %>
+    </div>
+  
 <%= render 'articles' %>
 
 
