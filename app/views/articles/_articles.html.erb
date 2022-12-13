@@ -37,8 +37,10 @@
 -->
         <div class="card-btns">
           <%= link_to "Read", article_path(article), class: "btn btn-outline-success" %>
-          <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-success" %>
-          <%= button_to "Delete", article_path(article), method: "delete", data: { turbo_confirm: 'Are you sure?' }, class: "btn btn-outline-success" %>
+          <% if logged_in? && (article.user == current_user || current_user.admin) %>
+            <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-success" %>
+            <%= button_to "Delete", article_path(article), method: "delete", data: { turbo_confirm: 'Are you sure?' }, class: "btn btn-outline-success" %>
+          <% end %>
         </div>
 
 <!-- 

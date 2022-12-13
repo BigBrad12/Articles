@@ -7,12 +7,40 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <li class="nav-item">
-          <%= button_to "List All", articles_path, method: :get, class:"nav-link active", id: "logout" %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Articles
+          </a>
+          <ul class="dropdown-menu">
+            <% if logged_in? %>
+              <li><%= link_to "Create Article", new_article_path, class: "dropdown-item" %></li>
+            <% end %>
+            <li><%= link_to "View Articles", articles_path, class: "dropdown-item" %></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
 
+      <% if logged_in? %>
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= "(Admin)" if current_user.admin? %> [ <%=  current_user.username  %> ]
+          </a>
+
+          <ul class="dropdown-menu">
+            <% if logged_in? %>
+              <li><%= button_to "View Profile", user_path(current_user), method: :get, class: "dropdown-item" %></li>
+              <li><%= button_to "Edit Profile", edit_user_path(current_user), method: :get, class: "dropdown-item" %></li>
+              <li><%= button_to "Delete Profile", user_path(current_user), method: :delete, class: "dropdown-item text-danger" %></li>
+            <% end %>
+          </ul>
+
+        </li>
+      <% end %>
+
         <li class="nav-item">
-          <%= button_to "Create New", new_article_path, method: :get, class:"nav-link active", id: "logout" %>
+          <%= button_to "Authors", users_path, method: :get, class: "nav-link active", id: "logout" %>
         </li>
 
         <li class="nav-item">

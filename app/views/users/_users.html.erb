@@ -37,7 +37,14 @@
 -->
         <div class="card-btns">
           <%= link_to "View Profile", user, class: "btn btn-outline-success" %>
-          <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-outline-success" %>
+          <% if logged_in? %>
+            <% if user == current_user %>
+              <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-outline-success" %>
+            <% end %>
+            <% if current_user.admin? %>
+              <%= button_to "Delete User", user_path(user), method: :delete, class: "btn btn-outline-danger" %>
+            <% end %>
+          <% end %>
         </div>
 
 <!-- 
