@@ -28,14 +28,9 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        if current_user.admin? 
-            flash[:notice] = "#{@user.username}'s account and articles have been deleted"
             @user.destroy
-            redirect_to root_path
-        else
-            @user.destroy
-            session[:user_id] = nil
-            flash[:notice] = "Your account and articles have been deleted"
+            session[:user_id] = nil if @user == current_user
+            flash[:notice] = "Account and articles have been deleted"
             redirect_to root_path
         end
         
