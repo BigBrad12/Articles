@@ -244,5 +244,11 @@ cursor: default;
     text-decoration: underline; 
 }
 .button_to {
-
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    flex: 1 1 auto;
+    text-align: center;
+}
+#logout {
+    background-color: rgb(26, 25, 25);
+    border: none;
 }
