@@ -27,6 +27,9 @@ gem "jbuilder"
 # Paginate data so it doesn't get skrewed
 gem 'will_paginate', '~> 3.3'
 
+# Testing GEM
+gem 'rexml', require: false
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
