@@ -11,7 +11,7 @@
 
           <%= f.label :title, class: "col-2 col-form-label" %> 
           <div class="col-10">
-            <%= f.text_field :title, class: "form-control" %>
+            <%= f.text_field :title, class: "form-control shadow" %>
           </div>
 
         </div>
@@ -20,7 +20,17 @@
 
           <%= f.label :description, class: "col-2 col-form-label" %>
             <div class="col-16">
-              <%= f.text_area :description, rows: 18, class: "form-control" %> 
+              <%= f.text_area :description, rows: 18, class: "form-control shadow" %> 
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+          <%= f.label :category, class: "col-2 col-form-label" %>
+            <div class="col-10">
+              <%= f.collection_select(:category_ids, Category.all, :id, :name, 
+              { prompt: "Select Categories For Article"}, { multiple: true, size: 5, class: "form-select shadow" } ) %>
             </div>
 
         </div>
