@@ -1,0 +1,13 @@
+<h1 class="page-heading col-4">Categories</h1>
+
+<section class="row">
+  <div class="grid">
+
+        <% @categories.each do |category| %>
+            <div class="card-btns", id="categories">
+            <%= link_to category.name, category_path(category), class: "btn btn-outline-success" %>
+            </div>
+        <% end %>
+        
+    <div>
+</section>
