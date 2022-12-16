@@ -2,12 +2,13 @@
 
 <section class="row">
   <div class="grid">
-
         <% @categories.each do |category| %>
-            <div class="card-btns", id="categories">
-            <%= link_to category.name, category_path(category), class: "btn btn-outline-success" %>
+            <div class="col-article container-border shadow cat-index-col">
+                <div class="card-btns", id="categories">
+                    <%= link_to category.name, category_path(category), class: "btn btn-outline-success" %>
+                    <%= pluralize(category.articles.count, "article") %>
+                </div>
             </div>
         <% end %>
-        
     <div>
 </section>

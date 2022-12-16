@@ -43,7 +43,7 @@ p {
 }
 .card-btns {
     text-align: center;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
 }
 .card-btns a {
     margin-left: 10px;
@@ -254,4 +254,20 @@ cursor: default;
 }
 #categories {
     display: inline-block;
+}
+.badges {
+    text-align: center;
+}
+.backg {
+    background-color: rgb(82, 146, 111);
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.cat-index-col {
+    max-width: 20%;
+    display: inline-block;
+    margin: 4px;
+}
+.cat-index-col div {
+    margin-top: 10px;
 }

@@ -28,7 +28,7 @@
             <% if logged_in? && current_user.admin? %>
               <li><%= link_to "Create Category", new_category_path, class: "dropdown-item" %></li>
             <% end %>
-            <li><%= link_to "View Categories", articles_path, class: "dropdown-item" %></li>
+            <li><%= link_to "View Categories", categories_path, class: "dropdown-item" %></li>
           </ul>
         </li>
 

@@ -1,1 +1,9 @@
-<h1 class="page-heading col-4"><%= @category.name %></h1>
+<h1 class="page-heading text-center"><%= @category.name %></h1>
+
+<div class="card-btns mb-4">
+    <% if logged_in? && current_user.admin %>
+        <%= link_to "Edit Category", edit_category_path(@category), class: "btn btn-outline-success" %>
+    <% end %>
+</div>
+
+<%= render 'articles/articles' %>

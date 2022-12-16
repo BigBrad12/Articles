@@ -17,6 +17,9 @@
         <div class="card-heading">
           <h5 class="text-center">Author: <%= link_to @article.user.username, user_path(@article.user) %></h5>
           <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+          <% if @article.categories.any? %>
+            <div class="mt-2 badges"><%= render @article.categories %></div>
+          <% end %>
         </div> 
 
         <div>
